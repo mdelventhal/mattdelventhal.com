@@ -6,7 +6,7 @@ title: Matt Delventhal
 superuser: true
 
 # Role/position/tagline
-role: Quantitative Researcher
+#role: Quantitative Researcher
 
 # Organizations/Affiliations to show in About widget
 #organizations:
