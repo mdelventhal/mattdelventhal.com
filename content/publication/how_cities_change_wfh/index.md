@@ -31,14 +31,8 @@ publication_types: ["2"]
 publication: In the Journal of Urban Economics
 publication_short: In JUE
 
-abstract: ow would the shape of our cities change if there were a permanent increase in working from home?  
-We study this question using a quantitative model of the Los Angeles metropolitan area featuring local agglomeration externalities and endogenous traffic congestion.  
-We find three important effects: 
-(1) Jobs move to the core of the city, while residents move to the periphery.  
-(2) Traffic congestion eases and travel times drop.
-(3) Average real estate prices fall, with declines in core locations and increases in the periphery.
-Workers who are able to switch to telecommuting enjoy large welfare gains by saving commute time and moving to more affordable neighborhoods. 
-Workers who continue to work on-site enjoy modest welfare gains due to lower commute times, improved access to jobs, and the fall in average real estate prices.
+abstract: How would the shape of our cities change if there were a permanent increase in working from home? We study this question using a quantitative model of the Los Angeles metropolitan area featuring local agglomeration externalities and endogenous traffic congestion. We find three important effects: (1) Jobs move to the core of the city, while residents move to the periphery. (2) Traffic congestion eases and travel times drop.
+(3) Average real estate prices fall, with declines in core locations and increases in the periphery. Workers who are able to switch to telecommuting enjoy large welfare gains by saving commute time and moving to more affordable neighborhoods. Workers who continue to work on-site enjoy modest welfare gains due to lower commute times, improved access to jobs, and the fall in average real estate prices.
 
 # Summary. An optional shortened abstract.
 summary: We use a quantitative model to explore the impact of increased remote work on the location of jobs and residents, real estate prices, and traffic congestion in the Los Angeles metro area.
