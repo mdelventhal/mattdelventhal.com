@@ -15,11 +15,11 @@ author_notes:
 - <a href="https://sites.google.com/view/eunjeekwon/home/">Visit Eunjee's website</a>
 - <a href="https://www.andrii-parkhomenko.com/">Visit Andrii's website</a>
 
-date: "2021-07-01T00:00:00Z"
-doi: ""
+date: "2022-01-01T00:00:00Z"
+doi: "https://doi.org/10.1016/j.jue.2021.103331"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2022-01-01T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
