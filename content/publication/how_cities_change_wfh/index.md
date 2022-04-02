@@ -12,8 +12,8 @@ authors:
 # Author notes (optional)
 author_notes:
 - ''
-- '[**Visit Eunjee's website**](https://sites.google.com/view/eunjeekwon/home/)'
-- '[**Visit Andrii's website**](https://www.andrii-parkhomenko.com/)'
+- "[**Visit Eunjee's website**](https://sites.google.com/view/eunjeekwon/home/)"
+- "[**Visit Andrii's website**](https://www.andrii-parkhomenko.com/)"
 
 date: "2022-01-01T00:00:00Z"
 doi: "https://doi.org/10.1016/j.jue.2021.103331"
