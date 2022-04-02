@@ -1,5 +1,5 @@
 ---
-title: "An example conference paper"
+title: "JUE Insights: How Do Cities Change When We Work from Home?"
 
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
@@ -15,7 +15,7 @@ author_notes:
 - <a href="https://sites.google.com/view/eunjeekwon/home/">Visit Eunjee's website</a>
 - <a href="https://www.andrii-parkhomenko.com/">Visit Andrii's website</a>
 
-date: "2013-07-01T00:00:00Z"
+date: "2021-07-01T00:00:00Z"
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
@@ -31,12 +31,19 @@ publication_types: ["2"]
 publication: In the Journal of Urban Economics
 publication_short: In JUE
 
-abstract: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum. Sed ac faucibus dolor, scelerisque sollicitudin nisi. Cras purus urna, suscipit quis sapien eu, pulvinar tempor diam. Quisque risus orci, mollis id ante sit amet, gravida egestas nisl. Sed ac tempus magna. Proin in dui enim. Donec condimentum, sem id dapibus fringilla, tellus enim condimentum arcu, nec volutpat est felis vel metus. Vestibulum sit amet erat at nulla eleifend gravida.
+abstract: ow would the shape of our cities change if there were a permanent increase in working from home?  
+We study this question using a quantitative model of the Los Angeles metropolitan area featuring local agglomeration externalities and endogenous traffic congestion.  
+We find three important effects: 
+(1) Jobs move to the core of the city, while residents move to the periphery.  
+(2) Traffic congestion eases and travel times drop.
+(3) Average real estate prices fall, with declines in core locations and increases in the periphery.
+Workers who are able to switch to telecommuting enjoy large welfare gains by saving commute time and moving to more affordable neighborhoods. 
+Workers who continue to work on-site enjoy modest welfare gains due to lower commute times, improved access to jobs, and the fall in average real estate prices.
 
 # Summary. An optional shortened abstract.
-summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: We use a quantitative model to explore the impact of increased remote work on the location of jobs and residents, real estate prices, and traffic congestion in the Los Angeles metro area.
 
-tags: []
+tags: [Urban, Telecommuting]
 
 # Display this page in the Featured widget?
 featured: true
@@ -67,15 +74,15 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects:
-- example
+# projects:
+# - example
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-slides: example
+# slides: example
 ---
 
 {{% callout note %}}
