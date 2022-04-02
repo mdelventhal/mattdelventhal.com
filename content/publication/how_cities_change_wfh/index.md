@@ -6,8 +6,8 @@ title: "JUE Insights: How Do Cities Change When We Work from Home?"
 # and it will be replaced with their full name and linked to their profile.
 authors:
 - mdelventhal
-- '[Eunjee Kwon](https://sites.google.com/view/eunjeekwon/home/)'
-- '[Andrii Parkhomenko](https://www.andrii-parkhomenko.com/)'
+- <https://sites.google.com/view/eunjeekwon/home/>
+- <https://www.andrii-parkhomenko.com/>
 
 # Author notes (optional)
 author_notes:
