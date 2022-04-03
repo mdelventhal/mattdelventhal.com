@@ -42,7 +42,7 @@ education:
 #   form "mailto:your-email@example.com" or "/#contact" for contact widget.
 social:
 - icon: envelope
-  icon_pack: fas
+  icon_pack: fab
   link: "mailto:delventhal.m@gmail.com"
 - icon: twitter
   icon_pack: fab
@@ -59,9 +59,10 @@ social:
 - icon: linkedin
   icon_pack: fab
   link: "https://www.linkedin.com/in/matt-delventhal-017b7629/"
- - icon: cv
-   icon_pack: ai
-   link: uploads/mdelventhal-cv.pdf
+- icon: cv
+  icon_pack: ai
+  link: uploads/mdelventhal-cv.pdf
+
 # Link to a PDF of your resume/CV.
 # To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
 # and uncomment the lines below.
