@@ -50,22 +50,24 @@ social:
 - icon: google-scholar  # Alternatively, use `google-scholar` icon from `ai` icon pack
   icon_pack: ai
   link: "https://scholar.google.com/citations?user=OhhkFg4AAAAJ"
+- icon: ideas-repec
+  icon_pack: ai
+  link: "https://ideas.repec.org/f/pde1130.html"
 - icon: github
   icon_pack: fab
   link: "https://github.com/mdelventhal"
 - icon: linkedin
   icon_pack: fab
   link: "https://www.linkedin.com/in/matt-delventhal-017b7629/"
-
-# Link to a PDF of your resume/CV.
-# To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
-# and uncomment the lines below.
  - icon: cv
    icon_pack: ai
    link: uploads/mdelventhal-cv.pdf
+# Link to a PDF of your resume/CV.
+# To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
+# and uncomment the lines below.
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: "delventhal.m@gmail.com"
+# email: "delventhal.m@gmail.com"
 
 # Highlight the author in author lists? (true/false)
 highlight_name: true
