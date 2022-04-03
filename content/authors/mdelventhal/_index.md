@@ -27,13 +27,13 @@ interests:
 education:
   courses:
   - course: Ph.D. in Economics
-    institution: Universitat Autònoma de Barcelona
+    institution: "[Universitat Autònoma de Barcelona](https://www.uabidea.eu/ \"IDEA program\")"
     year: 2018
   - course: M.A. in Economics
-    institution: Universitat Autònoma de Barcelona
+    institution: "[Universitat Autònoma de Barcelona](https://www.uabidea.eu/ \"IDEA program\")"
     year: 2014
   - course: B.S. in Economics
-    institution: University of Missouri-Saint Louis
+    institution: "[University of Missouri-Saint Louis](https://www.umsl.edu/~econ/ \"UMSL econ department\")"
     year: 2010
 
 # Social/Academic Networking
