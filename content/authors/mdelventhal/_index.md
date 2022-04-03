@@ -76,6 +76,8 @@ social:
 highlight_name: true
 ---
 
-The Kyrie Irving of macroeconomists.
+Matt Delventhal is a quantitative researcher who some have called the Kyrie Irving of macroeconomists.
+
+Recently he has thought a lot about the [Spatial Implications of Telecommuting]({{< relref "/publication/spatial-implications-telecommuting" >}}).
 
 {{< icon name="download" pack="fas" >}} Download my {{< staticref "uploads/mdelventhal-cv.pdf" "newtab" >}}resumé{{< /staticref >}}.
