@@ -4,7 +4,9 @@ title: "The cost of trade disruptions at different stages of development"
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
-authors: ["[Juan Carlos Conesa](https://sites.google.com/site/jcconesa/ \"Visit Juan Carlos' website\")", mdelventhal, "[Gajendran Raveendranathan](https://sites.google.com/site/gajendranraveendranathan/home \"Visit Gajen's website\")", "[Pau Pujolàs](https://pau.pujolasfons.com/home \"Visit Pau's website\")"]
+authors: [mdelventhal, "[Eunjee Kwon](https://sites.google.com/view/eunjeekwon/home/ \"Visit Eunjee's website\")", "[Andrii Parkhomenko](https://www.andrii-parkhomenko.com/ \"Visit Andrii's website\")"]
+
+#["[Juan Carlos Conesa](https://sites.google.com/site/jcconesa/ \"Visit Juan Carlos' website\")", mdelventhal, "[Gajendran Raveendranathan](https://sites.google.com/site/gajendranraveendranathan/home \"Visit Gajen's website\")", "[Pau Pujolàs](https://pau.pujolasfons.com/home \"Visit Pau's website\")"]
 
 # Author notes (optional)
 #author_notes:
