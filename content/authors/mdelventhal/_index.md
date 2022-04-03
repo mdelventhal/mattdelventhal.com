@@ -20,7 +20,7 @@ bio: The Kyrie Irving of macroeconomists.
 interests:
 - Future of (tele-) commuting
 - Diffusion of demographic change
-- Transport networks
+- Computable transport networks
 - Machine learning
 
 # Education to show in About widget
