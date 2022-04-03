@@ -33,6 +33,8 @@ abstract: "How would the shape of our cities change if there were a permanent in
 # Summary. An optional shortened abstract.
 summary: We use a quantitative model to explore the impact of increased remote work on the location of jobs and residents, real estate prices, and traffic congestion in the Los Angeles metro area.
 
+**Media:** [LA Times](https://www.latimes.com/opinion/story/2020-12-20/covid-los-angeles-cities-remote-work "LA Times"), [Time Magazine](https://time.com/6156751/remote-work-office-housing-market/ "Time Magazine"), [USC Tommy Talks](https://www.youtube.com/watch?v=WGijk1ZZ80o "USC Tommy Talks"), [USC Marshall News](https://www.marshall.usc.edu/news/how-telecommuting-changes-los-angeles "USC Marshall News"), [Academic Times](https://academictimes.com/future-of-cities-could-be-cheaper-downtown-housing-if-telecommuting-trend-continues/ "Academic Times"), [Fast Company](https://www.fastcompany.com/90635703/watch-these-4-trends-to-see-where-rent-prices-are-headed-after-the-pandemic?mc_cid=aa121d95f8 "Fast Company")
+
 tags: [Urban, Telecommuting]
 
 # Display this page in the Featured widget?
