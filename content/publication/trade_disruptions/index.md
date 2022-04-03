@@ -7,11 +7,11 @@ title: "The cost of trade disruptions at different stages of development"
 authors: ["[Juan Carlos Conesa](https://sites.google.com/site/jcconesa/ \"Visit Juan Carlos' website\")", mdelventhal, "[Gajendran Raveendranathan](https://sites.google.com/site/gajendranraveendranathan/home \"Visit Gajen's website\")", "[Pau Pujolàs](https://pau.pujolasfons.com/home \"Visit Pau's website\")"]
 
 # Author notes (optional)
-author_notes:
-- ''
-- ''
-- ''
-- ''
+#author_notes:
+#- ''
+#- ''
+#- ''
+#- ''
 
 date: "2021-11-06T00:00:00Z"
 doi: ""
