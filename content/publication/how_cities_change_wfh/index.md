@@ -4,8 +4,7 @@ title: "JUE Insights: How Do Cities Change When We Work from Home?"
 # Authors
 # If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
 # and it will be replaced with their full name and linked to their profile.
-authors: [mdelventhal, "**test**", "**testing**", "hi ho"]
-
+authors: [mdelventhal, "[Eunjee Kwon](https://sites.google.com/view/eunjeekwon/home/)", "[Andrii Parkhomenko](https://www.andrii-parkhomenko.com/)"]
 
 # Author notes (optional)
 author_notes:
