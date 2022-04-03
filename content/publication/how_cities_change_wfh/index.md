@@ -32,7 +32,7 @@ abstract: "How would the shape of our cities change if there were a permanent in
 (3) Average real estate prices fall, with declines in core locations and increases in the periphery. Workers who are able to switch to telecommuting enjoy large welfare gains by saving commute time and moving to more affordable neighborhoods. Workers who continue to work on-site enjoy modest welfare gains due to lower commute times, improved access to jobs, and the fall in average real estate prices."
 
 # Summary. An optional shortened abstract.
-summary: We use a quantitative model to explore the impact of increased remote work on the location of jobs and residents, real estate prices, and traffic congestion in the Los Angeles metro area.
+summary: > We use a quantitative model to explore the impact of increased remote work on the location of jobs and residents, real estate prices, and traffic congestion in the Los Angeles metro area.
 
 tags: [Urban, Telecommuting]
 
@@ -56,7 +56,7 @@ url_video: ''
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/pLCdAaMFLTE)'
+  caption: 'Changes in L.A. metro area real estate prices'
   focal_point: ""
   preview_only: false
 
@@ -76,13 +76,4 @@ image:
 # slides: example
 ---
 
-{{% callout note %}}
-Click the *Cite* button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
-
-{{% callout note %}}
-Create your slides in Markdown - click the *Slides* button to check out the example.
-{{% /callout %}}
-
-Supplementary notes can be added here, including [code, math, and images](https://wowchemy.com/docs/writing-markdown-latex/).
-
+**Media:** [LA Times](https://www.latimes.com/opinion/story/2020-12-20/covid-los-angeles-cities-remote-work "LA Times"), [Time Magazine](https://time.com/6156751/remote-work-office-housing-market/ "Time Magazine"), [USC Tommy Talks](https://www.youtube.com/watch?v=WGijk1ZZ80o "USC Tommy Talks"), [USC Marshall News](https://www.marshall.usc.edu/news/how-telecommuting-changes-los-angeles "USC Marshall News"), [Academic Times](https://academictimes.com/future-of-cities-could-be-cheaper-downtown-housing-if-telecommuting-trend-continues/ "Academic Times"), [Fast Company](https://www.fastcompany.com/90635703/watch-these-4-trends-to-see-where-rent-prices-are-headed-after-the-pandemic?mc_cid=aa121d95f8 "Fast Company")
