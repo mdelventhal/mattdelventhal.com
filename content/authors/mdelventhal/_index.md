@@ -74,7 +74,7 @@ social:
 highlight_name: true
 ---
 
-I am a quantitative researcher who has taught courses in Macroeconomics, Urban Economics, and Matlab at [Claremont McKenna College](https://www.cmc.edu/robert-day-school "The Robert Day School of Economics and Finance") and the [Universitat Autònoma de Barcelona](https://www.uabidea.eu/ "IDEA program, UAB"). Some have called me the [Kyrie Irving](https://nypost.com/2022/03/27/nets-kyrie-irving-gets-thunderous-ovation-in-first-game-back-at-barclays-center/ "Kyrie Irving") of macroeconomists.
+I am a quantitative researcher with a formal training in Economics. I have taught courses in Macroeconomics, Urban Economics, and Matlab at [Claremont McKenna College](https://www.cmc.edu/robert-day-school "The Robert Day School of Economics and Finance") and the [Universitat Autònoma de Barcelona](https://www.uabidea.eu/ "IDEA program, UAB"). Some have called me the [Kyrie Irving](https://nypost.com/2022/03/27/nets-kyrie-irving-gets-thunderous-ovation-in-first-game-back-at-barclays-center/ "Kyrie Irving") of macroeconomists.
 
 Recently I have investigated the [Spatial Implications of Telecommuting]({{< relref "/publication/spatial_implications_telecommuting" >}}) and the historical progress of [Demographic Transitions Across Time and Space]({{< relref "/publication/demographic_transitions" >}}).
 
