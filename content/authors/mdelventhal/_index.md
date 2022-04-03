@@ -18,8 +18,10 @@ bio: The Kyrie Irving of macroeconomists.
 
 # Interests to show in About widget
 interests:
-- The economics of (tele-) commuting
-- Demographics and economic growth
+- Future of (tele-) commuting
+- Economic growth
+- Transportation networks
+- Demography
 - Spatial analysis
 - Machine learning
 
