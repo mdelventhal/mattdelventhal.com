@@ -9,7 +9,7 @@ headless: true
 # Order that this section appears on the page.
 weight: 90
 
-title: Recent Publications
+title: Other research
 subtitle: ''
 
 content:
@@ -21,7 +21,7 @@ content:
     category: ''
     publication_type: ''
     author: ''
-    exclude_featured: false
+    exclude_featured: true
     exclude_future: false
     exclude_past: false
   # Choose how many pages you would like to display (0 = all pages)
