@@ -30,7 +30,7 @@ publication_short: Working Paper
 abstract: "We build a quantitative spatial model in which some workers can substitute on-site effort with work done from home. Ability and propensity to telecommute vary by education and industry, and telework mitigates the disutility of living far from the job site. We quantify our framework to match the distribution of jobs and residents across 4,502 U.S. locations. A permanent increase in the attractiveness of telework results in a rich pattern of reallocations within and across cities. There are winners and losers: income and welfare go up for workers who can telecommute, and down for those who cannot. This framework robustly predicts changes in residents observed 2020-2021. We use our model to evaluate two competing interpretations of the 2020 remote work shock, and conclude the change in preferences was more important than the change in technology."
 
 # Summary. An optional shortened abstract.
-summary: We use a quantitative model to explore the implications of increased remote work for the U.S. urban landscape. Our framework robustly predicts changes in residents observed 2020-2021.  We use our model to evaluate two competing interpretations of the 2020 remote work shock, and conclude the change in preferences was more important than the change in technology.
+summary: We use a quantitative model to explore the implications of increased remote work for the U.S. urban landscape. Our framework robustly predicts changes in residents observed 2020-2021.  We use our model to evaluate two competing interpretations of the 2020 remote work shock, and conclude the change in preferences was more important than the change in technology.<br/><br/>**Media:** [LA Times](https://www.latimes.com/opinion/story/2020-12-20/covid-los-angeles-cities-remote-work "LA Times"), [Skift](https://skift.com/2021/06/04/the-economic-dark-side-of-the-global-remote-work-movement/ "Skift"), [Fast Company](https://www.fastcompany.com/90635703/watch-these-4-trends-to-see-where-rent-prices-are-headed-after-the-pandemic?mc_cid=aa121d95f8 "Fast Company"), [Wallethub](https://wallethub.com/edu/hardest-working-cities-in-america/10424#expert=Andrii_Parkhomenko "Wallethub")
 
 tags: [Urban, Telecommuting]
 
@@ -73,3 +73,5 @@ image:
 #   Otherwise, set `slides: ""`.
 # slides: example
 ---
+
+**Media:** [LA Times](https://www.latimes.com/opinion/story/2020-12-20/covid-los-angeles-cities-remote-work "LA Times"), [Skift](https://skift.com/2021/06/04/the-economic-dark-side-of-the-global-remote-work-movement/ "Skift"), [Fast Company](https://www.fastcompany.com/90635703/watch-these-4-trends-to-see-where-rent-prices-are-headed-after-the-pandemic?mc_cid=aa121d95f8 "Fast Company"), [Wallethub](https://wallethub.com/edu/hardest-working-cities-in-america/10424#expert=Andrii_Parkhomenko "Wallethub")
