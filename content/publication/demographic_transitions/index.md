@@ -78,4 +78,5 @@ image:
 **Media:** [El Confidencial](https://blogs.elconfidencial.com/economia/la-mano-visible/2021-09-12/futuro-demografico-humanidad_3286394/ "El Confidencial (Spanish)"), [The Public Discourse](hhttps://www.thepublicdiscourse.com/2021/10/78340/ "The Public Discourse"), [Penn's Exchange](https://pism.podbean.com/e/jesus-fernandez-villaverde-on-the-incoming-demographic-collapse/ "Penn's Exchange")
 
 
-<iframe height="800" width="100%" frameborder="no" src="https://sites.google.com/view/demographic-transitions/"> </iframe>
+<iframe id="innerFrame" name="innerFrame" sandbox="allow-scripts allow-popups allow-forms allow-same-origin allow-popups-to-escape-sandbox allow-downloads" frameborder="0" allowfullscreen="" src="https://1707488018-atari-embeds.googleusercontent.com/embeds/16cb204cf3a9d4d223a0a3fd8b0eec5d/inner-frame-minified.html?jsh=m%3B%2F_%2Fscs%2Fabc-static%2F_%2Fjs%2Fk%3Dgapi.lb.en.NnK9YPjtg-w.O%2Fd%3D1%2Frs%3DAHpOoo9KePDGVlGjp-rlXwDM1kUO2Eh4gg%2Fm%3D__features__" style="overflow: auto;">
+</iframe>
