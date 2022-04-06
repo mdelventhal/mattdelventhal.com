@@ -14,7 +14,7 @@ image:
 
 links:
 - name: Research paper
-  url: "content/publications/demographic_transitions/"
+  url: "content/publication/demographic_transitions/"
 url_code: ""
 url_pdf: ""
 url_slides: ""
