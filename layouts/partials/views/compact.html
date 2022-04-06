@@ -78,7 +78,7 @@
     {{ with $resource }}
     {{ $image := .Resize "150x webp" }}
     <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
-      <img src="{{ $image.RelPermalink }}" height=600 width=800
+      <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
            alt="{{ $item.Title }}" loading="lazy">
     </a>
     {{end}}
