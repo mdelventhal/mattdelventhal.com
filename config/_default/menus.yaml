@@ -19,6 +19,9 @@ main:
   - name: Research
     url: '#featured'
     weight: 50
+  - name: Apps
+    url: '#projects'
+    weight: 55
   - name: Contact
     url: '#contact'
     weight: 60
