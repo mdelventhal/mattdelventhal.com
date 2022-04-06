@@ -73,7 +73,7 @@
     {{ end }}
 
   </div>
-  <div class="img-hover-zoom">
+  <div class="img-hover-zoom"; style="width:50%">
     {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $resource }}
     {{ $image := .Resize "450x webp" }}
