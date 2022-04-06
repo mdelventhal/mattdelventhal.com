@@ -28,7 +28,7 @@
   {{ $summary = $item.Summary }}
 {{ end }}
 
-<div class="card-simple view-compact">
+<div class="media stream-item view-card">
   <div class="media-body">
 
     <div class="section-subheading article-title mb-0 mt-0">
@@ -73,12 +73,12 @@
     {{ end }}
 
   </div>
-  <div class="img-hover-zoom"; style="width:50%">
+  <div class="ml-3">
     {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $resource }}
-    {{ $image := .Resize "808x455" }}
+    {{ $image := .Resize "150x webp" }}
     <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
-      <img src="{{ $image.RelPermalink }}" height=808 width=455
+      <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
            alt="{{ $item.Title }}" loading="lazy">
     </a>
     {{end}}
