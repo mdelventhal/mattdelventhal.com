@@ -76,7 +76,7 @@
   <div class="img-hover-zoom"; style="width:50%">
     {{ $resource := ($item.Resources.ByType "image").GetMatch "*featured*" }}
     {{ with $resource }}
-    {{ $image := .Fill (printf "808x455 webp") }}
+    {{ $image := .Resize "808x455 webp" }}
     <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
       <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}"
            alt="{{ $item.Title }}" loading="lazy">
