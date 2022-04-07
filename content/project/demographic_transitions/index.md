@@ -1,6 +1,6 @@
 ---
 title: Visualizing Demographic Transitions
-summary: "Data and interactive visualizations for "
+summary: 'Data and interactive visualizations for '
 tags:
 - 
 date: "2022-04-03T00:00:00Z"
