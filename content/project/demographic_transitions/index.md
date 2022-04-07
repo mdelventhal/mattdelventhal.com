@@ -1,6 +1,6 @@
 ---
 title: Visualizing Demographic Transitions
-summary: "[*Demographic Transitions Across Time and Space* (Delventhal, Fernández-Villaverde & Guner, 2021)](../../publication/demographic_transitions/ /"accompanying research paper/")."
+summary: "Data and interactive visualizations for "
 tags:
 - 
 date: "2022-04-03T00:00:00Z"
