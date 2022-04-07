@@ -26,7 +26,7 @@ url_video: ""
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides = "example-slides"` references `content/slides/example-slides.md`.
 #   Otherwise, set `slides = ""`.
-slides: example
+# slides: example
 ---
 
 With this app you can visualize the historical transition in birth and death rates for 186 countries. Just select the countries you would like to plot from the dropdown menu. Crude Birth and Death Rates (CBR/CDR) are the raw number of births/deaths per 1,000 population in one year. The modeled birth and death rates represent the 3-phase transition structure which best fits the underlying data. Details can be found in the research paper [*Demographic Transitions Across Time and Space* (Delventhal, Fernández-Villaverde & Guner, 2021)](../../publication/demographic_transitions/ "accompanying research paper").
