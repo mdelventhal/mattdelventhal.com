@@ -44,7 +44,7 @@ featured: true
 #   url: http://example.org
 links:
 - name: Data + visualization
-  url: "content/project/demographic_transitions/"
+  url: "project/demographic_transitions/"
 url_pdf: 'Demographic_Transitions.pdf'
 url_code: ''
 url_dataset: ''
