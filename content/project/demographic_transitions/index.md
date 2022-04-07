@@ -33,7 +33,7 @@ With this app you can visualize the historical transition in birth and death rat
 
 The year range can be adjusted using a slider below the chart. Clicking on the ">" arrow will open a sidebar, where you can set the y-axis limits and select which variables to graph. You can also adjust the chart view by using the mouse wheel to zoom and clicking and dragging on the chart directly.
 
-Below the chart a table will populate summarizing the start year, end year, initial level, and final level for the selected birth rate and death rate transitions. Some values are blank because the data do not allow us to observe either the start or the end of a transition.
+Below the chart a table will populate summarizing the start year, end year, initial level, and final level for the selected birth rate and death rate transitions. Some values may be blank because the data do not allow us to observe either the start or the end of a transition.
 
 Buttons below the chart and the summary table allow you to download either the data for the visualization you have selected, or the complete underlying dataset.
 
