@@ -75,6 +75,6 @@ image:
 # slides: example
 ---
 
-Data and interactive visualizations can be had through this nifty online app: [Visualizing Demographic Transitions](project/demographic_transitions/ "accompanying online app").
+Data and interactive visualizations can be had through this nifty online app: [Visualizing Demographic Transitions](../../project/demographic_transitions/ "accompanying online app").
 
 **Media:** [The Economist](https://www.economist.com/finance-and-economics/2021/12/11/why-the-demographic-transition-is-speeding-up "The Economist"), [El Confidencial](https://blogs.elconfidencial.com/economia/la-mano-visible/2021-09-12/futuro-demografico-humanidad_3286394/ "El Confidencial (Spanish)"), [The Public Discourse](hhttps://www.thepublicdiscourse.com/2021/10/78340/ "The Public Discourse"), [Penn's Exchange](https://pism.podbean.com/e/jesus-fernandez-villaverde-on-the-incoming-demographic-collapse/ "Penn's Exchange")
