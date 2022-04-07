@@ -1,6 +1,6 @@
 ---
 title: Visualizing Demographic Transitions
-summary: An example of using the in-built project page.
+summary: "Data and interactive visualizations for [*Demographic Transitions Across Time and Space*](../../publication/demographic_transitions/ /"accompanying research paper/")".
 tags:
 - 
 date: "2022-04-03T00:00:00Z"
