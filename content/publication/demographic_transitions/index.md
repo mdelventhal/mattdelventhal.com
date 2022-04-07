@@ -42,7 +42,8 @@ featured: true
 # links:
 # - name: Custom Link
 #   url: http://example.org
-
+- name: Data + visualization
+  url: content/project/demographic_transitions/
 url_pdf: 'Demographic_Transitions.pdf'
 url_code: ''
 url_dataset: ''
