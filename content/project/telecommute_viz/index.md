@@ -29,9 +29,9 @@ url_video: ""
 # slides: example
 ---
 
-With this app you can visualize the long-run predictions for shifts in distribution of people, jobs, and real estate prices in a world with higher rates of remote work. Select a city from the drop-down menu or use the tools in the sidebar to scroll around. Use the controls to select which variable to color the map with, and whether or not to use elevation to visualize pre-2020 resident or job density.
+With this app you can visualize the long-run predictions for shifts in distribution of people, jobs, and real estate prices in a world with higher rates of remote work. Select a city from the drop-down menu or use the tools in the sidebar (click the ">" arrow) to scroll around. Use the controls to select which variable to color the map with, and whether or not to use elevation to visualize pre-2020 resident or job density.
 
-You may also scroll by clicking and dragging and zoom with the mouse wheel, though this second might take you outside the currently-loaded portion of the map.
+You may also scroll by clicking and dragging and zoom with the mouse wheel, though this second method might take you outside the currently-loaded portion of the map.
 
 An explanation of the methodology can be found in the research paper [*Spatial Implications of Telecommuting* (Delventhal & Parkhomenko, 2022)](../../publication/spatial_implications_telecommuting/ "accompanying research paper").
 
