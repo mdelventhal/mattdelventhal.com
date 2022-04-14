@@ -76,6 +76,7 @@ image:
 # slides: example
 ---
 
+Data and interactive visualizations can be had through this nifty online app: [Visualizing Demographic Transitions](../../project/demographic_transitions/ "accompanying online app").
+
 **Media:** [LA Times](https://www.latimes.com/opinion/story/2020-12-20/covid-los-angeles-cities-remote-work "LA Times"), [Skift](https://skift.com/2021/06/04/the-economic-dark-side-of-the-global-remote-work-movement/ "Skift"), [Fast Company](https://www.fastcompany.com/90635703/watch-these-4-trends-to-see-where-rent-prices-are-headed-after-the-pandemic?mc_cid=aa121d95f8 "Fast Company"), [Wallethub](https://wallethub.com/edu/hardest-working-cities-in-america/10424#expert=Andrii_Parkhomenko "Wallethub")
 
-Data and interactive visualizations can be had through this nifty online app: [Visualizing Demographic Transitions](../../project/demographic_transitions/ "accompanying online app").
