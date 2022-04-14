@@ -1,6 +1,6 @@
 ---
-title: Visualizing Demographic Transitions
-summary: 'Data and interactive visualizations for *Demographic Transitions Across Time and Space* (Delventhal, Fernández-Villaverde & Guner, 2021).'
+title: Visualizing the Future of Remote Work
+summary: 'Data and interactive visualizations for *Spatial Implications of Telecommuting* (Delventhal & Parkhomenko 2022).'
 tags:
 - 
 date: "2022-04-03T00:00:00Z"
