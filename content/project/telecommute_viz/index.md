@@ -29,12 +29,10 @@ url_video: ""
 # slides: example
 ---
 
-With this app you can visualize the historical transition in birth and death rates for 186 countries. Just select the countries you would like to plot from the dropdown menu. Crude Birth and Death Rates (CBR/CDR) are the raw number of births/deaths per 1,000 population in one year. The modeled birth and death rates represent the 3-phase transition structure which best fits the underlying data. Details can be found in the research paper [*Demographic Transitions Across Time and Space* (Delventhal, Fernández-Villaverde & Guner, 2021)](../../publication/demographic_transitions/ "accompanying research paper").
+With this app you can visualize the long-run predictions for shifts in distribution of people, jobs, and real estate prices in a world with higher rates of remote work. Select a city from the drop-down menu or use the tools in the sidebar to scroll around. Use the controls to select which variable to color the map with, and whether or not to use elevation to visualize pre-2020 resident or job density.
 
-The year range can be adjusted using a slider below the chart. Clicking on the ">" arrow will open a sidebar, where you can set the y-axis limits and select which variables to graph. You can also adjust the chart view by using the mouse wheel to zoom and clicking and dragging on the chart directly.
+You may also scroll by clicking and dragging and zoom with the mouse wheel, though this second might take you outside the currently-loaded portion of the map.
 
-Below the chart a table will populate summarizing the start year, end year, initial level, and final level for the selected birth rate and death rate transitions. Some values may be blank because the data do not allow us to observe either the start or the end of a transition.
-
-Buttons below the chart and the summary table allow you to download either the data for the visualization you have selected, or the complete underlying dataset.
+An explanation of the methodology can be found in the research paper [*Spatial Implications of Telecommuting* (Delventhal & Parkhomenko, 2022)](../../publication/spatial_implications_telecommuting/ "accompanying research paper").
 
 <iframe height="1100" width="95%" frameborder="no" src="https://share.streamlit.io/mdelventhal/telecommute_viz/main/telecommute_viz.py"> </iframe>
