@@ -1,8 +1,14 @@
 ---
 title: Classifying Occupations
 summary: 'Use machine learning to automatically class occupations into different types based on user input.'
-tags: machine learning, logistic regression, logit, principal component analysis, PCA, SQL
-- 
+tags: 
+- machine learning
+- logistic regression
+- logit
+- principal component analysis
+- PCA
+- SQL
+
 date: "2022-04-26T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
