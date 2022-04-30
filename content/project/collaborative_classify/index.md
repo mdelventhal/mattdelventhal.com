@@ -37,6 +37,6 @@ url_video: ""
 
 This app uses machine learning to automatically class occupations into different types based on accumulated user submissions from the [Occupation classifier](../../project/occu_classify/ "Occupation Classifier") app. The larger, pooled datasets allow us to use the classification algorithm to its full potential.
 
-<iframe height="1100" width="95%" frameborder="no" src="https://share.streamlit.io/mdelventhal/telecommute_viz/main/telecommute_viz.py"> </iframe>
+<iframe height="1100" width="95%" frameborder="no" src="https://share.streamlit.io/mdelventhal/collaborative_classify/main/collaborative_classify.py"> </iframe>
 
 
