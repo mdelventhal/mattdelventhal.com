@@ -43,7 +43,7 @@ featured: true
 #   url: http://example.org
 links:
 - name: Data + visualization
-  url: "project/demographic_transitions/"
+  url: "project/telecommute_viz/"
 url_pdf: 'Delventhal_Parkhomenko_WFH.pdf'
 url_code: ''
 url_dataset: ''
