@@ -77,7 +77,7 @@ subject to the following constraints:
 3. **For each technician, order of jobs is assigned sequentially with no gaps:** $$ \sum\limits_{j=1}^J x_{jkr} \leq \left \\{ \begin{array}{l l} 1 & {\small \text{for }  r = 1 , k \in \\{ 1,2,...,K \\} } \\\\ \\\\ \sum\limits_{j=1}^J x_{jk,r-1} & {\small \text{for } r \in \\{2, 3, ..., J\\}, k \in \\{ 1,2,...,K \\} } \end{array} \right. $$
 4. **Job starts allow sufficient time to arrive at job site from previous location:** $$ \begin{flalign}t_j &\leq \sum\limits_{k = 1}^K x_{jk0} \tau_{ \small O_k,L_j} + \sum\limits_{r=2}^J \sum\limits_{i = 1}^J \sum\limits_{k=1}^K x_{jkr} x_{ik,r-1} \left \[ t_i + p_i + \tau_{\small L_i,L_j}  \right \] \\\\ \\\\ & \quad \quad {\small \text{ for } j \in \\{1,2,...,J \\} } \end{flalign}$$
 5. **No technician works longer than time allocation:** $$ \begin{flalign}\sum\limits_{r = 1}^J \sum\limits_{j = 1}^{J} & x_{jkr} p_j + \sum\limits_{j = 1}^{J}  x_{jko} \tau_{\small O_k, L_j }  + \sum\limits_{r=2}^{J} \sum\limits_{i=1}^J \sum\limits_{j=1}^J x_{ik,r-1} x_{jk,r} \tau_{\small L_i, L_j} \\\\
-&  \quad + \sum\limits_{r=1}^{J-1} \sum\limits_{j = 1}^J \left ( \sum\limits_{i=1}^J  x_{ikr} \right ) \cdot \left (1 - \sum\limits_{i=1}^J x_{ik,r+1} \right ) \cdot x_{jkr} \tau_{\small L_j, O_k}  \\\\ & quad + \sum\limits_{j=1}^J x_{jkJ} \tau_{\small L_j,Ok}   \leq w_k \\\\ \\\\ & {\small \text{ for } k \in \\{1, 2, ..., K \\} } \end{flalign}$$
+&  \quad + \sum\limits_{r=1}^{J-1} \sum\limits_{j = 1}^J \left ( \sum\limits_{i=1}^J  x_{ikr} \right ) \cdot \left (1 - \sum\limits_{i=1}^J x_{ik,r+1} \right ) \cdot x_{jkr} \tau_{\small L_j, O_k}  \\\\ & \quad + \sum\limits_{j=1}^J x_{jkJ} \tau_{\small L_j,Ok}   \leq w_k \\\\ \\\\ & {\small \text{ for } k \in \\{1, 2, ..., K \\} } \end{flalign}$$
 
 ## Solution approaches
 
@@ -102,11 +102,24 @@ In our custom algorithm, the decision process will be explicitly broken down int
 
 We will solve the problem starting at stage 3 and working backwards. When determining the choices or stage 1, we will use a classic "branch and bound" approach, in which entire branches of possible combinations of decisions are iteratively ruled out based on the current "best-yet" objective function value.
 
-Two key feature we will exploit are:
+Three key feature we will exploit are:
 1. For a given ordering of jobs, there are only a limited number of start times for each job that are likely to be optimal. This allows us to treat each continuous time choice as just another discrete choice with a limited number of possible values, and avoid possibly unreliable non-derivative-based continuous optimization algorithms.
 2. For a given allocation of jobs, the contribution of each technician to the objective function is independent of each other. This will mean that while working backwards through the problem, we only have to solve each stage once.
+3. The objective function has a hard minimum: zero, when all jobs are completed with no lateness or start window misses. Therefore, if our algorithm finds at least one optimal solution, we will tell it to stop--no need to look further. 
 
+The following are the specific steps the algorithm takes:
+1. **Calculate the partial independent contribution of each possible assignment of jobs, in each possible ordering, for each technician.** 
+  a. For each combination and ordering of jobs, check first if it will satisfy the total work time constraint for the technician. If not, skip it.
+  b. If a combination and ordering satisfies the total work time constraint, cycle through the relevant permutations of possible starting times in order.
+  c. For each job, try at most 7 possible starting times: (1) as early as possible, (2) at the beginning of the "start window", (3) at the tail end of the "start window," (4) just in time to finish the job at the due time, (5) just in time for the following job to start at the beginning of its "start window," (6) just in time for the following job to start at the end of its "start window," (7) just in time for the following job to finish just in time, at its due time. There are many cases where some of these are not relevant and are skipped. For example, if a technician is only assigned one job, it is unnecessary to try more than one start time: that which allows her to finish right on time, or as close to it as possible.
+  d. For each combination of assigned jobs, discard all but the one with the lowest partial contribution to the objective function. If there is more than one such ordering, keep only the first one found--ordering is irrelevant to the optimality of the assignments of other technicians.
+2. **Perform an undirected search through the possible combinations of job assignments to technicians:**
+  a. Cycle through technicians one at a time making assignments.
+  b. Use the already-prepared dictionary of partial contributions to the objective function to calculate total objective function value.
+  c. If at some point when only some technicians have received an assignment, the accumulated objective value exceeds the best-yet objective function value, abort, and skip all permutations involving the already-made assignments. This is the "branch and bound" part of the algorithm.
+  d. Count any left-over jobs as unfilled, and add to objective function accordingly.
 
+The part of this algorithm which probably has the most room for improvement is step 2: specifically, the undirected nature of the search. However, for a problem instance like the one we will see below, which is relatively small-scale and has plenty of slack in the technician roster, it performs quite well.
 
 ### Gurobi-based solution
 
