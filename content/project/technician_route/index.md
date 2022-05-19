@@ -48,7 +48,7 @@ The company would like to start all jobs in the specified window and complete al
 
 ### Time and Space
 
-Suppose that the planning day starts at time 0 and ends after $T$ minutes. There are a set of $N$ locations which are the sites of customers and technician depots. Let {{<math>}}$\tau_{mn}${{<\math>}} represent the travel time in minutes from location $m$ to location $n$ for $m,n \in \{1,2,..., N\}$.
+Suppose that the planning day starts at time 0 and ends after $T$ minutes. There are a set of $N$ locations which are the sites of customers and technician depots. Let $\tau_{mn}$ represent the travel time in minutes from location $m$ to location $n$ for $m,n \in \{1,2,..., N\}$.
 
 ### Jobs
 
