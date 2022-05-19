@@ -79,9 +79,36 @@ subject to the following constraints:
 5. **No technician works longer than time allocation:** $$ \begin{flalign}\sum\limits_{r = 1}^J \sum\limits_{j = 1}^{J} & x_{jkr} p_j + \sum\limits_{j = 1}^{J}  x_{jko} \tau_{\small O_k, L_j }  + \sum\limits_{r=2}^{J} \sum\limits_{i=1}^J \sum\limits_{j=1}^J x_{ik,r-1} x_{jk,r} \tau_{\small L_i, L_j} \\\\
 &  \quad + \sum\limits_{r=1}^{J-1} \sum\limits_{j = 1}^J \left ( \sum\limits_{i=1}^J  x_{ikr} \right ) \cdot \left (1 - \sum\limits_{i=1}^J x_{ik,r+1} \right ) \cdot x_{jkr} \tau_{\small L_j, O_k}  \\\\ & quad + \sum\limits_{j=1}^J x_{jkJ} \tau_{\small L_j,Ok}   \leq w_k \\\\ \\\\ & {\small \text{ for } k \in \\{1, 2, ..., K \\} } \end{flalign}$$
 
-## Hand-coded solution
+## Solution approaches
 
-## Gurobi-based solution
+### Features of this problem that make it tricky
+
+This problem contains a mixture of discrete decision variables (whom to send to each job, in which order) with continuous variables (what exact time to start each job). The presence of discrete decisions is what makes this and other Mixed-Integer-Programming problems relatively difficult to solve: the number of permutations of possible combinations of discrete choices will be massive even for a relatively small-scale problem. This means that a brute-force approach which blindly explores all the permutations will probably be computationally infeasible even for a toy problem.
+
+We should also note that the objective function is not continuously differentiable in the continuous choice variables. This means that any simple derivative-based approach to dealing with this part of the problem will also likely fail.
+
+There are two practical approaches that may be useful in solving this kind of problem:
+1. Formulate a customized approach that exploits simplifying features specific to the structure of this problem.
+2. Formulate the problem in a way that it can be fed into a general MIP solver such as Gurobi, which has been optimized to automatically exploit features that commonly occur in the structure of problems of this general type.
+
+In what follows, we will try both.
+
+### Hand-coded solution
+
+In our custom algorithm, the decision process will be explicitly broken down into three stages:
+1. The company chooses which technicians do which jobs.
+2. For each technician assigned more than one job, the company chooses which order to do the jobs in.
+3. Given the assignment and order of the jobs, the compnay chooses the start time for each.
+
+We will solve the problem starting at stage 3 and working backwards. When determining the choices or stage 1, we will use a classic "branch and bound" approach, in which entire branches of possible combinations of decisions are iteratively ruled out based on the current "best-yet" objective function value.
+
+Two key feature we will exploit are:
+1. For a given ordering of jobs, there are only a limited number of start times for each job that are likely to be optimal. This allows us to treat each continuous time choice as just another discrete choice with a limited number of possible values, and avoid possibly unreliable non-derivative-based continuous optimization algorithms.
+2. For a given allocation of jobs, the contribution of each technician to the objective function is independent of each other. This will mean that while working backwards through the problem, we only have to solve each stage once.
+
+
+
+### Gurobi-based solution
 
 ## An example problem instance
 
