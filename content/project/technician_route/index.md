@@ -52,7 +52,7 @@ Suppose that the planning day starts at time 0 and ends after $T$ minutes. There
 
 ### Jobs
 
-There are $J$ jobs to be completed. Each job $j \in \{1, 2, ..., J\}$ has a priority level $\pi_j$ and requires $p_j$ minutes to be completed. Each customer has specified that they would prefer work to begin between time $a_j$ and $b_j$, and that the job should be fully complete by time $c_j$. Let the location of each job be given by $L_j \in \{1,2,...,N\}$.
+There are $J$ jobs to be completed. Each job $j \in \\{1, 2, ..., J\\}$ has a priority level $\pi_j$ and requires $p_j$ minutes to be completed. Each customer has specified that they would prefer work to begin between time $a_j$ and $b_j$, and that the job should be fully complete by time $c_j$. Let the location of each job be given by $L_j \in \{1,2,...,N\}$.
 
 ### Technicians
 
