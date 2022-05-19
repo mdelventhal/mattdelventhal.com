@@ -66,7 +66,7 @@ The company wishes to minimize total weighted lateness, out-of-bounds start time
 
 Let $x_{jkr}$ be an indicator variable taking a value of 1 if job $j$ is the $r^{\text{th}}$ job which the company chooses to assign to technician $k$, and zero otherwise. For example, if technician 1 is assigned two jobs, first job $7$, and then job $3$, then $x_{711} = 1$ and $x_{312} = 1$, while $x_{j1r} = 0$ for all other combinations of $j$ and $r$. Let $t_j \in \[0,T\]$ represent the start time that the company chooses for job $j$.
 
-The company's problem can then formally be given as $$ \min\limits_{x_{jkr},t_j} \left \\{ \sum\limits_{j = 1}^{J} \left \[ \left (1 - \sum\limits_{r = 1}^{J} \sum\limits_{k=1}^K x_{jkr} \right ) \times C_1 + \left ( \sum\limits_{r = 1}^{J} \sum\limits_{k=1}^K x_{jkr}  \right ) \times \left \[ \max\\{ a \\}  + \max\\{ b \\} \cdot C_0 + \max\\{ c \\} \cdot C_0 \right \]  \right \]  \right \}$$
+The company's problem can then formally be given as $$ \min\limits_{x_{jkr},t_j} \left \\{ \sum\limits_{j = 1}^{J} \left \[ \left (1 - \sum\limits_{r = 1}^{J} \sum\limits_{k=1}^K x_{jkr} \right ) \times C_1 + \left ( \sum\limits_{r = 1}^{J} \sum\limits_{k=1}^K x_{jkr}  \right ) \times \left \[ \max\\{ a \\}  + \max\\{ b \\} \cdot C_0 + \max\\{ c \\} \cdot C_0 \right \]  \right \]  \right \} $$
 
 
 ## Hand-coded solution
