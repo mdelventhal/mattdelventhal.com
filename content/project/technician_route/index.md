@@ -46,6 +46,29 @@ The company would like to start all jobs in the specified window and complete al
 
 ## Formal specification
 
+### Time and Space
+
+Suppose that the planning day starts at time 0 and ends after $T$ minutes. There are a set of $N$ locations which are the sites of customers and technician depots. Let $\tau_{mn}$ represent the travel time in minutes from location $m$ to location $n$ for $m,n \in \{1,2,..., N\}$.
+
+### Jobs
+
+There are $J$ jobs to be completed. Each job $j \in \{1, 2, ..., J\}$ has a priority level $\pi_j$ and requires $p_j$ minutes to be completed. Each customer has specified that they would prefer work to begin between time $a_j$ and $b_j$, and that the job should be fully complete by time $c_j$. Let the location of each job be given by $L_j \in \{1,2,...,N\}$.
+
+### Technicians
+
+There are $K$ technicians available for work. Each must begin and end his or her work day at their "home" depot, located at $O_k \in \{1,2,...,N\}$ for $k \in \{1,2,...,K\}$. Total time spent traveling and working for technician $k$ may not exceed $W_k$ minutes. Each technician is qualified to do some jobs, and may be unqualified to do others: let $q_{jk}$ be an indicator function, taking a value of 1 if technician $k$ is qualified to do job $j$, and taking a value of 0 otherwise.
+
+### Company's problem
+
+The company must choose which technicians will do which jobs and in which order they will do them. The order of the jobs defines a route that the technician will travel, from the depot to the first job, then to the second and so on, and finally returning from the last job to the depot. Additinally, the company must specify a start time for each job.
+
+The company wishes to minimize total weighted lateness, out-of-bounds start times, and no-shows. The weight the company places on each minute of lateness is normalized to 1, and multiplied by the priority $\pi_j$ for each job. The company places a weight $C_0 \times \pi_j$ on each minute that a job $j$'s start time is outside the customer's preferred window, and values the cost of not completing job $j$ at all at $C_1 \times \pi_j$.
+
+Let $x_{jkr}$ be an indicator variable taking a value of 1 if job $j$ is the $r^{\text{th}}$ job which the company chooses to assign to technician $k$, and zero otherwise. For example, if technician 1 is assigned two jobs, first job $7$, and then job $3$, then $x_{711} = 1$ and $x_{312} = 1$, while $x_{j1r} = 0$ for all other combinations of $j$ and $r$. Let $t_j \in [0,T]$ represent the start time that the company chooses for job $j$.
+
+The company's problem can then formally be given as $$ \min\limits_{x_{jkr},t_j} \left \{ \sum\limits_{j = 1}^{J} \left [ \left (1 - \sum\limits_{r = 1}^{J} \sum\limits_{k=1}^K x_{jkr} \right ) \times C_1 + \left ( \sum\limits_{r = 1}^{J} \sum\limits_{k=1}^K x_{jkr}  \right ) \times \left [ \max\{ \right }  + \max\{  \} \cdot C_0 + \max\{  \} \cdot C_0 \right ]  \right ]  \right \}$$
+
+
 ## Hand-coded solution
 
 ## Gurobi-based solution
