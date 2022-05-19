@@ -56,7 +56,7 @@ There are {{<math>}}$J${{<\math>}} jobs to be completed. Each job {{<math>}}$j \
 
 ### Technicians
 
-There are {{<math>}}$K${{<\math>}} technicians available for work. Each must begin and end his or her work day at their "home" depot, located at {{<math>}}$O_k \in \{1,2,...,N\}${{<\math>}} for {{<math>}}$k \in \{1,2,...,K\}${{<\math>}}. Total time spent traveling and working for technician {{<math>}}$k${{<\math>}} may not exceed $W_k$ minutes. Each technician is qualified to do some jobs, and may be unqualified to do others: let $q_{jk}$ be an indicator function, taking a value of 1 if technician $k$ is qualified to do job $j$, and taking a value of 0 otherwise.
+There are {{<math>}}$K${{<\math>}} technicians available for work. Each must begin and end his or her work day at their "home" depot, located at {{<math>}}$O_k \in \{1,2,...,N\}${{<\math>}} for {{<math>}}$k \in \{1,2,...,K\}${{<\math>}}. Total time spent traveling and working for technician {{<math>}}$k${{<\math>}} may not exceed {{<math>}}$W_k${{<\math>}} minutes. Each technician is qualified to do some jobs, and may be unqualified to do others: let {{<math>}}$q_{jk}${{<\math>}} be an indicator function, taking a value of 1 if technician $k$ is qualified to do job {{<math>}}$j${{<\math>}}, and taking a value of 0 otherwise.
 
 ### Company's problem
 
