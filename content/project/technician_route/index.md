@@ -68,7 +68,7 @@ Let $x_{jkr}$ be an indicator variable taking a value of 1 if job $j$ is the $r^
 
 For ease of presentation, let us also define $z_j \equiv \sum\limits_{r = 1}^R \sum\limits_{k = 1}^{K} x_{jkr}$. Notice that if the job $j$ is assigned in any order to any technician, $z_j$ will take a value of 1; but it will take a value of 0 otherwise. Thus, $z_j$ functions as an indicator variable for whether the job will be completed or not.
 
-The company's problem can then formally be given as $$ \min\limits_{x_{jkr},t_j} \left \\{   \sum\limits_{j=1}^J \pi_j \times \left \[  \left ( 1 - z_j  \right ) \cdot C_1  + z_j \cdot \left \[ \max \\{ a \\}  \right \] \right \] \right \\} $$
+The company's problem can then formally be given as $$ \min\limits_{x_{jkr},t_j} \left \\{   \sum\limits_{j=1}^J \pi_j \times \left \[ \begin{array}{l} \left ( 1 - z_j  \right ) \cdot C_1  \\\\ + z_j \cdot \left \[ \max \\{ a \\}  \right \] \end{array}\right \] \right \\} $$
 
 
 ## Hand-coded solution
