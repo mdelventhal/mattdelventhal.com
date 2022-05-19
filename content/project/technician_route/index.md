@@ -66,10 +66,14 @@ The company wishes to minimize total weighted lateness, out-of-bounds start time
 
 Let $x_{jkr}$ be an indicator variable taking a value of 1 if job $j$ is the $r^{\text{th}}$ job which the company chooses to assign to technician $k$, and zero otherwise. For example, if technician 1 is assigned two jobs, first job $7$, and then job $3$, then $x_{711} = 1$ and $x_{312} = 1$, while $x_{j1r} = 0$ for all other combinations of $j$ and $r$. Let $t_j \in \[0,T\]$ represent the start time that the company chooses for job $j$.
 
-For ease of presentation, let us also define $z_j \equiv \sum\limits_{r = 1}^R \sum\limits_{k = 1}^{K} x_{jkr}$. Notice that if the job $j$ is assigned in any order to any technician, $z_j$ will take a value of 1; but it will take a value of 0 otherwise. Thus, $z_j$ functions as an indicator variable for whether the job will be completed or not.
+For ease of presentation, let us also define $z_j \equiv \sum\limits_{r = 1}^J \sum\limits_{k = 1}^{K} x_{jkr}$. Notice that if the job $j$ is assigned in any order to any technician, $z_j$ will take a value of 1; but it will take a value of 0 otherwise. Thus, $z_j$ serves as an indicator of whether the job will be completed or not.
 
-The company's problem can then formally be given as $$ \min\limits_{x_{jkr} ~ , ~ t_j} \left \\{   \sum\limits_{j=1}^J \pi_j \times \left \[ \begin{array}{l} \left ( 1 - z_j  \right ) ~ \times \overbrace{C_1}^{\begin{array}{c}\text{penalty} \\\\ \text{for} \\\\ \text{no-show} \end{array}} + \\\\ \\\\   \quad + ~ z_j \times \left (  \begin{array}{l} \small \quad \quad \underbrace{\max \\{ 0 ~ , ~ t_j + p_j - c_j \\}}\_{\begin{array}{c} \text{lateness} \end{array}} \\\\ \small + ~ C_0 \cdot \underbrace{\max \\{ 0 ~ , ~ a_j - t_j \\}}\_{\begin{array}{c} \text{start} \\\\ \text{too early} \end{array}} \\\\ \small + ~ C_0 \cdot \underbrace{ \max \\{ 0 ~ , ~ t_j - b_j \\}}\_{\begin{array}{c} \text{start} \\\\ \text{too late} \end{array}}   \end{array} \right )  \end{array} \right \] \right \\} $$
+The company's problem can then formally be given as $$ \min\limits_{x_{jkr} ~ , ~ t_j} \left \\{   \sum\limits_{j=1}^J \pi_j \times \left \[ \begin{array}{l} \left ( 1 - z_j  \right ) ~ \times \overbrace{C_1}^{\begin{array}{c}\text{penalty} \\\\ \text{for} \\\\ \text{no-show} \end{array}} + \\\\ \\\\   \quad + ~ z_j \times \left (  \begin{array}{l} \small \quad \quad \underbrace{\max \\{ 0 ~ , ~ t_j + p_j - c_j \\}}\_{\begin{array}{c} \text{lateness} \end{array}} \\\\ \small + ~ C_0 \cdot \underbrace{\max \\{ 0 ~ , ~ a_j - t_j \\}}\_{\begin{array}{c} \text{start} \\\\ \text{too early} \end{array}} \\\\ \small + ~ C_0 \cdot \underbrace{ \max \\{ 0 ~ , ~ t_j - b_j \\}}\_{\begin{array}{c} \text{start} \\\\ \text{too late} \end{array}}   \end{array} \right )  \end{array} \right \] \right \\}, $$
 
+subject to the following constraints:
+
+1. **At most one technician per job:** $$ \sum\limits_{r = 1}^J \sum\limits_{k = 1}^{K} x_{jkr} \leq 1 $$
+2. **Ordering of jobs is assigned sequentially with no gaps:** $$ \sum\limits_{j=1}^J x_{jkr} \leq \left \{ \begin{array}{l l} 1 & \text{for } r = 1 \\\\ \\\\ \sum\limits_{j=1}^J x_{jk,r-1} & \text{for } r \in \{2, 3, ..., J\}  \end{array} $$
 
 ## Hand-coded solution
 
