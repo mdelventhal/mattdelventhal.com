@@ -48,15 +48,15 @@ The company would like to start all jobs in the specified window and complete al
 
 ### Time and Space
 
-Suppose that the planning day starts at time 0 and ends after $T$ minutes. There are a set of $N$ locations which are the sites of customers and technician depots. Let $\tau_{mn}$ represent the travel time in minutes from location $m$ to location $n$ for $m,n \in \{1,2,..., N\}$.
+Suppose that the planning day starts at time 0 and ends after {{<math>}}$T${{<\math>}} minutes. There are a set of $N$ locations which are the sites of customers and technician depots. Let {{<math>}}$\tau_{mn}${{<\math>}} represent the travel time in minutes from location {{<math>}}$m${{<\math>}} to location {{<math>}}$n${{<\math>}} for {{<math>}}$m,n \in \{1,2,..., N\}${{<\math>}}.
 
 ### Jobs
 
-There are $J$ jobs to be completed. Each job $j \in \{1, 2, ..., J\}$ has a priority level $\pi_j$ and requires $p_j$ minutes to be completed. Each customer has specified that they would prefer work to begin between time $a_j$ and $b_j$, and that the job should be fully complete by time $c_j$. Let the location of each job be given by $L_j \in \{1,2,...,N\}$.
+There are {{<math>}}$J${{<\math>}} jobs to be completed. Each job {{<math>}}$j \in \{1, 2, ..., J\}${{<\math>}} has a priority level {{<math>}}$\pi_j${{<\math>}} and requires {{<math>}}$p_j${{<\math>}} minutes to be completed. Each customer has specified that they would prefer work to begin between time {{<math>}}$a_j${{<\math>}} and {{<math>}}$b_j${{<\math>}}, and that the job should be fully complete by time {{<math>}}$c_j${{<\math>}}. Let the location of each job be given by {{<math>}}$L_j \in \{1,2,...,N\}${{<\math>}}.
 
 ### Technicians
 
-There are $K$ technicians available for work. Each must begin and end his or her work day at their "home" depot, located at $O_k \in \{1,2,...,N\}$ for $k \in \{1,2,...,K\}$. Total time spent traveling and working for technician $k$ may not exceed $W_k$ minutes. Each technician is qualified to do some jobs, and may be unqualified to do others: let $q_{jk}$ be an indicator function, taking a value of 1 if technician $k$ is qualified to do job $j$, and taking a value of 0 otherwise.
+There are {{<math>}}$K${{<\math>}} technicians available for work. Each must begin and end his or her work day at their "home" depot, located at {{<math>}}$O_k \in \{1,2,...,N\}${{<\math>}} for {{<math>}}$k \in \{1,2,...,K\}${{<\math>}}. Total time spent traveling and working for technician {{<math>}}$k${{<\math>}} may not exceed $W_k$ minutes. Each technician is qualified to do some jobs, and may be unqualified to do others: let $q_{jk}$ be an indicator function, taking a value of 1 if technician $k$ is qualified to do job $j$, and taking a value of 0 otherwise.
 
 ### Company's problem
 
