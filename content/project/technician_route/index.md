@@ -73,8 +73,9 @@ The company's problem can then formally be given as $$ \min\limits_{x_{jkr} ~ , 
 subject to the following constraints:
 
 1. **At most one technician per job:** $$ \sum\limits_{r = 1}^J \sum\limits_{k = 1}^{K} x_{jkr} \leq 1  \text{ for } j \in \\{1,2,...,J\\}$$
-2. **For each technician, order of jobs is assigned sequentially with no gaps:** $$ \sum\limits_{j=1}^J x_{jkr} \leq \left \\{ \begin{array}{l l} 1 & \text{for } r = 1 , k \in \\{ 1,2,...,K \\} \\\\ \\\\ \sum\limits_{j=1}^J x_{jk,r-1} & \text{for } r \in \\{2, 3, ..., J\\}, k \in \\{ 1,2,...,K \\}  \end{array} \right. $$
-3. **Job starts allow sufficient time to arrive at job site from previous location:** $$ t_j \leq \sum\limits_{k = 1}^K x_{jk0} \tau_{ \small O_k,L_j} + \sum\limits_{r=2}^J \sum\limits_{i = 1}^J \sum\limits_{k=1}^K x_{jkr} x_{ik,r-1} \left \[ t_i + p_i + \tau_{\small L_i,L_j}  \right \] $$
+2. **Technicians not assigned if not qualified:** $$ \left (\sum\limits_{r = 1}^J x_{jkr} \right ) \cdot \left ( 1 - q_{jk} \right ) = 0 \text{ for } j,k \in \\{1,2,...,J\\} \times \\{1,2,...,K\\}$$
+3. **For each technician, order of jobs is assigned sequentially with no gaps:** $$ \sum\limits_{j=1}^J x_{jkr} \leq \left \\{ \begin{array}{l l} 1 & \text{for } r = 1 , k \in \\{ 1,2,...,K \\} \\\\ \\\\ \sum\limits_{j=1}^J x_{jk,r-1} & \text{for } r \in \\{2, 3, ..., J\\}, k \in \\{ 1,2,...,K \\}  \end{array} \right. $$
+4. **Job starts allow sufficient time to arrive at job site from previous location:** $$ t_j \leq \sum\limits_{k = 1}^K x_{jk0} \tau_{ \small O_k,L_j} + \sum\limits_{r=2}^J \sum\limits_{i = 1}^J \sum\limits_{k=1}^K x_{jkr} x_{ik,r-1} \left \[ t_i + p_i + \tau_{\small L_i,L_j}  \right \] $$
 
 ## Hand-coded solution
 
