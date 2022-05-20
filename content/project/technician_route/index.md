@@ -29,7 +29,7 @@ url_video: ""
 
 The problem seems simple: a telecommunications firm has jobs that must be completed, and must assign them to its available technicians. Not all technicians are qualified to do all jobs, they are based out of depots a certain distance away from the jobs, and each job has a deadline.
 
-Below, we will formulate this as a Mixed Integer Programming problem with the objective of minimizing lateness and, if possible, completing all the jobs. We will then demonstrate both a custom, hand-coded solution, and a solution designed to use industry-leading MIP package Gurobi. Finally, we will present the hand-coded version as a live, interactive app, which will allow you to edit the list of jobs and see how the algorithm performs.
+Below, we will formulate this as a Mixed Integer Programming problem with the objective of minimizing lateness and, if possible, completing all the jobs. We will then demonstrate both a custom, hand-coded solution, and a solution designed to use industry-leading MIP package Gurobi.
 
 The original version of this problem is borrowed from a Gurobi example application, which you can find [here](https://gurobi.github.io/modeling-examples/technician_routing_scheduling/technician_routing_scheduling.html "Technician Routing and Scheduling Problem").
 
@@ -199,3 +199,6 @@ Note that the Gurobi solver is highly optimized and takes advantage of parallel 
 
 In the [original Gurobi example](https://gurobi.github.io/modeling-examples/technician_routing_scheduling/technician_routing_scheduling.html#Model-Formulation "model formulation"), the problem was formalized in a slightly different way from what I have done here. It ends up producing an instantiated model with fewer variables and constraints, and Gurobi reports that it executed from start finish in a fraction of a second. 
 
+## In conclusion
+
+Here we have seen that there are at least three ways to implement a solver for this problem. All of them find a solution in an acceptably short period of time, at least for the simple base scenario we have tested here.
