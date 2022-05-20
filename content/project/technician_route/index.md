@@ -95,7 +95,7 @@ There are two practical approaches that may be useful in solving this kind of pr
 
 In what follows, we will try both.
 
-### Hand-coded solution
+### A customized algorithm
 
 In our custom algorithm, the decision process will be explicitly broken down into three stages:
 1. The company chooses which technicians do which jobs.
@@ -104,10 +104,9 @@ In our custom algorithm, the decision process will be explicitly broken down int
 
 We will solve the problem starting at stage 3 and working backwards. When determining the choices or stage 1, we will use a classic "branch and bound" approach, in which entire branches of possible combinations of decisions are iteratively ruled out based on the current "best-yet" objective function value.
 
-Three key feature we will exploit are:
-1. For a given ordering of jobs, there are only a limited number of start times for each job that are likely to be optimal. This allows us to treat each continuous time choice as just another discrete choice with a limited number of possible values, and avoid possibly unreliable non-derivative-based continuous optimization algorithms.
-2. For a given allocation of jobs, the contribution of each technician to the objective function is independent of each other. This will mean that while working backwards through the problem, we only have to solve each stage once.
-3. The objective function has a hard minimum: zero, when all jobs are completed with no lateness or start window misses. Therefore, if our algorithm finds at least one optimal solution, we will tell it to stop--no need to look further. 
+Two key features we will exploit are:
+1. **Effectively discrete choice of start time.** For a given ordering of jobs, there are only a limited number of start times for each job that are likely to be optimal. This allows us to treat each continuous time choice as just another discrete choice with a limited number of possible values, and avoid possibly unreliable non-derivative-based continuous optimization algorithms.
+2. **Independence across technicians.** For a given allocation of jobs, the contribution of each technician to the objective function is independent of each other. This will mean that while working backwards through the problem, we only have to solve each stage once.
 
 The following are the specific steps the algorithm takes:
 1. **Calculate the partial independent contribution of each possible assignment of jobs, in each possible ordering, for each technician.** 
@@ -120,8 +119,9 @@ The following are the specific steps the algorithm takes:
   - **b.** Use the already-prepared dictionary of partial contributions to the objective function to calculate total objective function value.
   - **c.** If at some point when only some technicians have received an assignment, the accumulated objective value exceeds the best-yet objective function value, abort, and skip all permutations involving the already-made assignments. This is the "branch and bound" part of the algorithm.
   - **d.** Count any left-over jobs as unfilled, and add to objective function accordingly.
+  - **e.** If an allocation is found which yields an objective value of 0, ***stop***. This is the theoretical minimum, and we only need one solution--no need to look further.
 
-The part of this algorithm which probably has the most room for improvement is step 2: specifically, the undirected nature of the search. However, for a problem instance like the one we will see below, which is relatively small-scale and has plenty of slack in the technician roster, it performs quite well.
+The part of this algorithm which probably has the most room for improvement is step 2: in general, an undirected search might be inefficient. For the particular problem instance we will review below, however, it turns out to be quite fast.
 
 ### Gurobi-based solution
 
@@ -140,7 +140,7 @@ The main complication in implementing it is that some auxiliary variables must b
 ## An example problem instance
 
 The same one given in the original Gurobi demonstration problem.
-### Hand-coded performance
+### Custom algorithm performance
 
 ### Gurobi performance
 
