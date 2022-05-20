@@ -3,7 +3,7 @@ title: Optimal Routing with Mixed Integer Programming
 summary: 'An interactive solution to a tricky Mixed Integer Programming problem, with a comparison to a Gurobi-based solution.'
 
 # Link this post with a project
-github: [https://github.com/mdelventhal/technician_route_notebook]
+url_code: 'https://github.com/mdelventhal/technician_route_notebook'
 
 # Date published
 date: "2022-05-19T00:00:00Z"
