@@ -126,7 +126,8 @@ The part of this algorithm which probably has the most room for improvement is s
 The problem as specified above is already nearly ready to be introduced to the Gurobi solver. All that remains is to define some auxiliary variables:
   - $X_{ijkr}^0 \equiv x_{ikr} x_{jkr}$
   - $X_{ijkr}^1 \equiv x_{ik,r-1} x_{jkr}$
-  - $\theta_{ikr} \equiv \left \\{ \begin{array}{l l} \left ( \sum\limits_{j = 1}^J  X_{ijk,r+1}^0  \right )  \left (x_{ikr} - \sum\limits_{j=1}^J X_{ijkr}^1  \right ) & {\small \text{ for } r \in \\{1, 2, ..., R-1\\} } \\\\ x_{ikr} & {\small \text{ for } r = R  }}  \end{array} \right.$
+  - $\theta_{ikr} $
+  - $\equiv  \begin{array}{l l} \left ( \sum\limits_{j = 1}^J  X_{ijk,r+1}^0  \right )  \left (x_{ikr} - \sum\limits_{j=1}^J X_{ijkr}^1  \right ) & {\small \text{ for } r \in \\{1, 2, ..., R-1\\} } \\\\ x_{ikr} & {\small \text{ for } r = R  }}  \end{array} $
 
 This is necessary because Gurobi does not allow for more than two decision variables to be multiplied together in any constraint or in the objective function.
 
