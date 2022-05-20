@@ -125,17 +125,12 @@ The part of this algorithm which probably has the most room for improvement is s
 
 ### Gurobi-based solution
 
-The problem as specified above is already nearly ready to be introduced to the Gurobi solver. All that remains is to define some auxiliary variables so that the constraints and objective function can be made to conform to Gurobi's particular requirements. The most important of these for this problem is that no more than two decision variables can be multiplied together in any constraint or objective function.
+The problem as specified above is already nearly ready to be introduced to the Gurobi solver. It only requires the definition of a few auxiliary variables so that the constraints and objective function can meet Gurobi's particular requirements. The most important of these is that no more than two decision variables can ever be multiplied by one another in a single term.
 
-This means that 
-  - $X_{ijkr}^0 \equiv x_{ikr} x_{jkr}$
-  - $X_{ijkr}^1 \equiv x_{ik,r-1} x_{jkr}$
-  - $\theta_{ikr} \equiv  \left \\{ \begin{array}{r l}\small \left ( \sum\limits_{j = 1}^J  X_{ijk,r+1}^0  \right ) \left (x_{ikr} - \sum\limits_{j=1}^J X_{ijkr}^1  \right )   & {\scriptsize \text{ for } r \in \\{1, 2, ..., R-1 \\} } \\\\ \small \\\\   x_{ikr} & {\scriptsize \text{ for } r = R  }  \end{array} \right.$
-  - 
-
-This is necessary because Gurobi does not allow for more than two decision variables to be multiplied together in any constraint or in the objective function.
-
-The main complication in implementing it is that some auxiliary variables must be defined to make the constraints compatible with Gurobi's particular requirements. For example, it is not possible to pass any constraint in which more than two decision variables are multiplied together
+To this end,
+  - $S_{ijkr}$ the "sequence" indicator variable, is defined exactly as given above and used to define constraints 4 and 5.
+  - $F_{jkr}$ the "final job" indicator variable from constraint 5, is defined almost as given above, with a one additional intermediate auxiliary variable defined to meet the decision variable multiplication limit.
+  - Auxiliary variables are defined for lateness, for earliness of job start, and for lateness of job start, and these are used to define the objective funciton.
 
 ## An example problem instance
 
