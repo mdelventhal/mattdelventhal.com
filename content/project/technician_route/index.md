@@ -123,7 +123,14 @@ The part of this algorithm which probably has the most room for improvement is s
 
 ### Gurobi-based solution
 
-The problem as specified above is already in a good format to be introduced to the Gurobi solver. The main complication in implementing it is that some auxiliary variables must be defined to make the constraints compatible with Gurobi's particular requirements. For example, it is not possible to pass any constraint in which more than two decision variables are multiplied together
+The problem as specified above is already nearly ready to be introduced to the Gurobi solver. All that remains is to define some auxiliary variables:
+  - $X_{ijkr}^0 \equiv x_{ikr} x_{jkr}$
+  - $X_{ijkr}^1 \equiv x_{ik,r-1} x_{jkr}$
+  - $\theta_{ikr} \equiv \left \\{ \begin{array}{l l} \sum\limits_{j = 1}^J \left ( X_{ijk,r+1}^0  \right )  \left (x_{ikr}  \sum\limits_{j=1}^J X_{ijkr}^1  \right ) & {\small \text{ for } r \in \\{1, 2, ..., R-1\\} \\\\ x_{ikr} & {\small \text{ for } r = R  }}  \end{array} \right.$
+
+This is necessary because Gurobi does not allow for more than two decision variables to be multiplied together in any constraint or in the objective function.
+
+The main complication in implementing it is that some auxiliary variables must be defined to make the constraints compatible with Gurobi's particular requirements. For example, it is not possible to pass any constraint in which more than two decision variables are multiplied together
 
 ## An example problem instance
 
