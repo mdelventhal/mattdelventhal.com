@@ -29,7 +29,7 @@ url_video: ""
 
 The problem seems simple: a telecommunications firm has jobs that must be completed, and must assign them to its available technicians. Not all technicians are qualified to do all jobs, they are based out of depots a certain distance away from the jobs, and each job has a deadline.
 
-Below, we will formulate this as a Mixed Integer Programming problem with the objective of minimizing lateness and, if possible, completing all the jobs. We will then demonstrate both custom, hand-coded solution, and a solution designed to use industry-leading MIP package Gurobi. Finally, we will present the hand-coded version as a live, interactive app, which will allow you to edit the list of jobs and see how the algorithm performs.
+Below, we will formulate this as a Mixed Integer Programming problem with the objective of minimizing lateness and, if possible, completing all the jobs. We will then demonstrate both a custom, hand-coded solution, and a solution designed to use industry-leading MIP package Gurobi. Finally, we will present the hand-coded version as a live, interactive app, which will allow you to edit the list of jobs and see how the algorithm performs.
 
 The original version of this problem is borrowed from a Gurobi example application, which you can find [here](https://gurobi.github.io/modeling-examples/technician_routing_scheduling/technician_routing_scheduling.html "Technician Routing and Scheduling Problem").
 
@@ -128,25 +128,74 @@ The part of this algorithm which probably has the most room for improvement is s
 The problem as specified above is already nearly ready to be introduced to the Gurobi solver. It only requires the definition of a few auxiliary variables so that the constraints and objective function can meet Gurobi's particular requirements. The most important of these is that no more than two decision variables can ever be multiplied by one another in a single term.
 
 To this end,
-  - $S_{ijkr}$ the "sequence" indicator variable, is defined exactly as given above and used to define constraints 4 and 5.
+  - $S_{ijkr}$ the "sequence" indicator variable, is defined exactly as given above and used to specify constraints 4 and 5.
   - $F_{jkr}$ the "final job" indicator variable from constraint 5, is defined almost as given above, with a one additional intermediate auxiliary variable defined to meet the decision variable multiplication limit.
-  - Auxiliary variables are defined for lateness, for earliness of job start, and for lateness of job start, and these are used to define the objective funciton.
+  - Auxiliary variables are defined for lateness, for earliness of job start, and for lateness of job start, and these are used to specify the objective function.
 
-## An example problem instance
+## Performance comparison
 
-The same one given in the original Gurobi demonstration problem.
+We test the performance of the two algorithms on the base scenario given [here](https://gurobi.github.io/modeling-examples/technician_routing_scheduling/technician_routing_scheduling.html#Problem-Instance "problem instance") in the original Gurobi example. You can also see these details by examining the data files in this [Git repository](). For the sake of brevity, we do not replicate all the details here. The basic features are thus: there are 7 jobs and 7 technicians with a planning horizon of 10 hours/600 minutes, from 7am to 5pm. As it turns out, there is enough slack in the technician roster for there to be multiple ways to start and complete all the jobs on time.
+
 ### Custom algorithm performance
+
+The algorithm is implemented without any parallelization, even though it is eminently parallelizable. You may to the Jupyter notebook in this [Git repository]() for the full code, and the data files for the scenario. It takes approximately 1.75 seconds to complete **Step 1**, and 20 milliseconds to complete **Step 2** and find one of the on-time solutions. 
 
 ### Gurobi performance
 
-## Discussion
+The same Jupyter notebook referenced above also contains code for the Gurobi problem implementation. Note that it might be a little bit tricky to get this part of the notebook to run, as the the problem may be bigger than what the standard free Gurobi license allows. Because of this, I replicate the model output messages below:
 
-## Live interactive problem instance
+```
+Gurobi Optimizer version 9.5.1 build v9.5.1rc2 (linux64)
+Thread count: 24 physical cores, 48 logical processors, using up to 24 threads
+Optimize a model with 182 rows, 5173 columns and 3731 nonzeros
+Model fingerprint: 0xaf002fe6
+Model has 1029 quadratic objective terms
+Model has 301 quadratic constraints
+Model has 4459 general constraints
+Variable types: 28 continuous, 5145 integer (5145 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+02]
+  QMatrix range    [1e+00, 1e+00]
+  QLMatrix range   [1e+00, 2e+02]
+  Objective range  [6e+03, 2e+04]
+  QObjective range [2e+00, 5e+02]
+  Bounds range     [1e+00, 6e+02]
+  RHS range        [1e+00, 5e+02]
+Presolve added 1759 rows and 0 columns
+Presolve removed 0 rows and 4259 columns
+Presolve time: 0.17s
+Presolved: 8104 rows, 4108 columns, 22814 nonzeros
+Presolved model has 762 SOS constraint(s)
+Variable types: 1196 continuous, 2912 integer (2912 binary)
+Found heuristic solution: objective 97600.000000
 
-Modify the job list and see how it works for yourself!
+Root relaxation: objective 0.000000e+00, 548 iterations, 0.01 seconds (0.01 work units)
 
-### We're testing out markdown.
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
 
-And some more text.
+     0     0    0.00000    0    7 97600.0000    0.00000   100%     -    1s
+H    0     0                    1674.0000000    0.00000   100%     -    1s
+     0     0    0.00000    0    7 1674.00000    0.00000   100%     -    1s
+     0     2    0.00000    0    7 1674.00000    0.00000   100%     -    1s
+*   26    20               5       0.0000000    0.00000  0.00%  44.3    1s
 
-<iframe height="1100" width="95%" frameborder="no" src="https://share.streamlit.io/mdelventhal/telecommute_viz/main/telecommute_viz.py"> </iframe>
+Cutting planes:
+  Implied bound: 4
+
+Explored 30 nodes (2482 simplex iterations) in 1.74 seconds (1.09 work units)
+Thread count was 24 (of 48 available processors)
+
+Solution count 3: 0 1674 97600 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 0.000000000000e+00, best bound 0.000000000000e+00, gap 0.0000%
+Optimal objective value: 0.0
+```
+
+Note that the Gurobi solver is highly optimized and takes advantage of parallel processing where possible. Using multiple cores, it executes in about the same time, 1.75 seconds, as my custom algorithm.
+
+### Compared to the original Gurobi example
+
+In the [original Gurobi example](https://gurobi.github.io/modeling-examples/technician_routing_scheduling/technician_routing_scheduling.html#Model-Formulation "model formulation"), the problem was formalized in a slightly different way from what I have done here. It ends up producing an instantiated model with fewer variables and constraints, and Gurobi reports that it executed from start finish in a fraction of a second. 
+
