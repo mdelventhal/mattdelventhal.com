@@ -20,7 +20,7 @@ featured: false
 # Featured image
 # Place an image named `featured.jpg/png` in this page's folder and customize its options here.
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
+  caption: 
   focal_point: ""
   placement: 2
   preview_only: false
@@ -145,11 +145,11 @@ To this end,
 
 ## Performance comparison
 
-We test the performance of the two algorithms on the base scenario given [here](https://gurobi.github.io/modeling-examples/technician_routing_scheduling/technician_routing_scheduling.html#Problem-Instance "problem instance") in the original Gurobi example. You can also see these details by examining the data files in this [Git repository](). For the sake of brevity, we do not replicate all the details here. The basic features are thus: there are 7 jobs and 7 technicians with a planning horizon of 10 hours/600 minutes, from 7am to 5pm. As it turns out, there is enough slack in the technician roster for there to be multiple ways to start and complete all the jobs on time.
+We test the performance of the two algorithms on the base scenario given [here](https://gurobi.github.io/modeling-examples/technician_routing_scheduling/technician_routing_scheduling.html#Problem-Instance "problem instance") in the original Gurobi example. You can also see these details by examining the data files in this [Git repository](https://github.com/mdelventhal/technician_route_notebook). For the sake of brevity, we do not replicate all the details here. The basic features are thus: there are 7 jobs and 7 technicians with a planning horizon of 10 hours/600 minutes, from 7am to 5pm. As it turns out, there is enough slack in the technician roster for there to be multiple ways to start and complete all the jobs on time.
 
 ### Custom algorithm performance
 
-The algorithm is implemented without any parallelization, even though it is eminently parallelizable. You may to the Jupyter notebook in this [Git repository]() for the full code, and the data files for the scenario. It takes approximately 1.75 seconds to complete **Step 1**, and 20 milliseconds to complete **Step 2** and find one of the on-time solutions. 
+The algorithm is implemented without any parallelization, even though it is eminently parallelizable. You may to the Jupyter notebook in this [Git repository](https://github.com/mdelventhal/technician_route_notebook) for the full code, and the data files for the scenario. It takes approximately 1.75 seconds to complete **Step 1**, and 20 milliseconds to complete **Step 2** and find one of the on-time solutions. 
 
 ### Gurobi performance
 
