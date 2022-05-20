@@ -75,9 +75,11 @@ subject to the following constraints:
 1. **At most one technician per job:** $$ \begin{flalign}\sum\limits_{r = 1}^J \sum\limits_{k = 1}^{K} & x_{jkr}  \leq 1  \\\\ & \quad \quad {\small  \text{ for }  j \in \\{1,2,...,J\\}} \end{flalign} $$
 2. **Technicians not assigned if not qualified:** $$\begin{flalign} \left (\sum\limits_{r = 1}^J x_{jkr} \right )& \cdot \left ( 1 - q_{jk} \right ) = 0 \\\\ & \quad \quad {\small \text{ for } j,k \in \\{1,2,...,J \\} \times \\{1,2,...,K \\} } \end{flalign} $$
 3. **For each technician, order of jobs is assigned sequentially with no gaps:** $$ \sum\limits_{j=1}^J x_{jkr} \leq \left \\{ \begin{array}{l l} 1 & {\small \text{for }  r = 1 , k \in \\{ 1,2,...,K \\} } \\\\ \\\\ \sum\limits_{j=1}^J x_{jk,r-1} & {\small \text{for } r \in \\{2, 3, ..., J\\}, k \in \\{ 1,2,...,K \\} } \end{array} \right. $$
-4. **Job starts allow sufficient time to arrive at job site from previous location:** $$ \begin{flalign}t_j &\leq \sum\limits_{k = 1}^K x_{jk0} \tau_{ \small O_k,L_j} + \sum\limits_{r=2}^J \sum\limits_{i = 1}^J \sum\limits_{k=1}^K x_{jkr} x_{ik,r-1} \left \[ t_i + p_i + \tau_{\small L_i,L_j}  \right \] \\\\ \\\\ & \quad \quad {\small \text{ for } j \in \\{1,2,...,J \\} } \end{flalign}$$
-5. **No technician works longer than time allocation:** $$ \begin{flalign}\sum\limits_{r = 1}^J \sum\limits_{j = 1}^{J} & x_{jkr} p_j + \sum\limits_{j = 1}^{J}  x_{jko} \tau_{\small O_k, L_j }  + \sum\limits_{r=2}^{J} \sum\limits_{i=1}^J \sum\limits_{j=1}^J x_{ik,r-1} x_{jk,r} \tau_{\small L_i, L_j} \\\\
-&  \quad + \sum\limits_{r=1}^{J-1} \sum\limits_{j = 1}^J \left ( \sum\limits_{i=1}^J  x_{ikr} \right ) \cdot \left (1 - \sum\limits_{i=1}^J x_{ik,r+1} \right ) \cdot x_{jkr} \tau_{\small L_j, O_k}  \\\\ & \quad + \sum\limits_{j=1}^J x_{jkJ} \tau_{\small L_j,O_k}   \leq w_k \\\\ \\\\ & {\small \text{ for } k \in \\{1, 2, ..., K \\} } \end{flalign}$$
+4. **Job starts allow sufficient time to arrive at job site from previous location:** $$ \begin{flalign}t_j &\leq \sum\limits_{k = 1}^K x_{jk0} \tau_{ \small O_k,L_j} + \sum\limits_{r=2}^J \sum\limits_{i = 1}^J \sum\limits_{k=1}^K S_{ijkr} \left \[ t_i + p_i + \tau_{\small L_i,L_j}  \right \] \\\\ \\\\ & \quad \quad {\small \text{ for } j \in \\{1,2,...,J \\} } \end{flalign}$$
+  - here we define $S_{ijkr} \equiv  x_{ik,r-1} x_{jkr}$. $S_{ijkr}$ takes a value of 1 if job $j$ is technician $k$'s $r^{\text{th}}$ job, and is preceded  in *S*equence by job $i$.
+5. **No technician works longer than time allocation:** $$ \begin{flalign}\sum\limits_{r = 1}^J \sum\limits_{j = 1}^{J} & x_{jkr} p_j + \sum\limits_{j = 1}^{J}  x_{jko} \tau_{\small O_k, L_j }  + \sum\limits_{r=2}^{J} \sum\limits_{i=1}^J \sum\limits_{j=1}^J S_{ijkr} \tau_{\small L_i, L_j} \\\\
+&  \quad + \sum\limits_{r=1}^{J} \sum\limits_{j = 1}^J F_{jkr} \tau_{\small L_j,O_k}   \leq W_k \\\\ \\\\ & {\small \text{ for } k \in \\{1, 2, ..., K \\} } \end{flalign}$$
+  - here we define $F_{jkr} \equiv \left \\{  \\{ \begin{array}{r l}\small \left ( \sum\limits_{i = 1}^J  x_{ikr}  \right ) \cdot \left (1 - \sum\limits_{i=1}^J x_{ik,r+1}  \right ) \cdot x_{ikr}   & {\scriptsize \text{ for } r \in \\{1, 2, ..., R-1 \\} } \\\\ \small \\\\   x_{ikr} & {\scriptsize \text{ for } r = R  }  \end{array}  \right.$. $F_{jkr}$ takes a value of 1 if $j$ is the $r^{\text{th}}$ and *F*inal job assigned to technician $k$.
 
 ## Solution approaches
 
@@ -123,10 +125,13 @@ The part of this algorithm which probably has the most room for improvement is s
 
 ### Gurobi-based solution
 
-The problem as specified above is already nearly ready to be introduced to the Gurobi solver. All that remains is to define some auxiliary variables:
+The problem as specified above is already nearly ready to be introduced to the Gurobi solver. All that remains is to define some auxiliary variables so that the constraints and objective function can be made to conform to Gurobi's particular requirements. The most important of these for this problem is that no more than two decision variables can be multiplied together in any constraint or objective function.
+
+This means that 
   - $X_{ijkr}^0 \equiv x_{ikr} x_{jkr}$
   - $X_{ijkr}^1 \equiv x_{ik,r-1} x_{jkr}$
-  - $\theta_{ikr} \equiv  \left \\{ \begin{array}{r l}\small \left ( \sum\limits_{j = 1}^J  X_{ijk,r+1}^0  \right ) \left (x_{ikr} - \sum\limits_{j=1}^J X_{ijkr}^1  \right )   & {\scriptsize \text{ for } r \in \\{1, 2, ..., R-1 \\} } \\\\ \small \\\\  \small x_{ikr} & {\scriptsize \text{ for } r = R  }  \end{array} \right.$
+  - $\theta_{ikr} \equiv  \left \\{ \begin{array}{r l}\small \left ( \sum\limits_{j = 1}^J  X_{ijk,r+1}^0  \right ) \left (x_{ikr} - \sum\limits_{j=1}^J X_{ijkr}^1  \right )   & {\scriptsize \text{ for } r \in \\{1, 2, ..., R-1 \\} } \\\\ \small \\\\   x_{ikr} & {\scriptsize \text{ for } r = R  }  \end{array} \right.$
+  - 
 
 This is necessary because Gurobi does not allow for more than two decision variables to be multiplied together in any constraint or in the objective function.
 
