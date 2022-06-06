@@ -12,7 +12,7 @@ author_notes:
 - ''
 
 date: "2022-03-09T00:00:00Z"
-doi: "http://dx.doi.org/10.2139/ssrn.374655"
+doi: "10.2139/ssrn.374655"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2022-01-01T00:00:00Z"
