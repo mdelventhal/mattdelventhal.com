@@ -43,7 +43,7 @@ featured: true
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: 'DKP_WFH.pdf'
+url_pdf: 'publication/how_cities_change_wfh/DKP_WFH.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
