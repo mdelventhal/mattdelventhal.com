@@ -35,4 +35,4 @@ You may also scroll by clicking and dragging and zoom with the mouse wheel, thou
 
 An explanation of the methodology can be found in the research paper [*Spatial Implications of Telecommuting* (Delventhal & Parkhomenko, 2022)](../../publication/spatial_implications_telecommuting/ "accompanying research paper").
 
-<iframe height="1100" width="95%" frameborder="no" src="https://share.streamlit.io/mdelventhal/telecommute_viz/main/telecommute_viz.py"> </iframe>
+<iframe height="1100" width="95%" frameborder="no" src="https://mdelventhal-telecommute-viz-telecommute-viz-hephdx.streamlitapp.com/?embedded=True"> </iframe>
