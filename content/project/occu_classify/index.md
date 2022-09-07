@@ -39,5 +39,5 @@ This app uses machine learning to automatically class occupations into different
 
 The collaborative classification project applies a similar methodology to the accumulated mass of user inputs. You may access it through [this link](../../project/collaborative_classify/ "related project")
 
-<iframe height="1100" width="95%" frameborder="no" src="https://share.streamlit.io/mdelventhal/occu_classify/main/occu_classify.py"> </iframe>
+<iframe height="1100" width="95%" frameborder="no" src="https://mdelventhal-occu-classify-occu-classify-lsy277.streamlitapp.com/?embedded=True"> </iframe>
 
