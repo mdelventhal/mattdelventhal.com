@@ -37,4 +37,4 @@ Below the chart a table will populate summarizing the start year, end year, init
 
 Buttons below the chart and the summary table allow you to download either the data for the visualization you have selected, or the complete underlying dataset.
 
-<iframe height="1100" width="95%" frameborder="no" src="https://share.streamlit.io/mdelventhal/dt_visualize/main/DT_visualize.py"> </iframe>
+<iframe height="1100" width="95%" frameborder="no" src="https://mdelventhal-dt-visualize-dt-visualize-bo7stw.streamlitapp.com/?embedded=True"> </iframe>
