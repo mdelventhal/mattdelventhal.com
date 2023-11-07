@@ -35,7 +35,7 @@ abstract: "We study the impact of trade disruptions at different stages of devel
 # Summary. An optional shortened abstract.
 summary: We study the impact of trade disruptions at different stages of development in a two-country, three-sector model of Spain and the UK from 1850 to 2000.
 
-tags: [rade disruption, International Trade, Structural transformation, Industrialization]
+tags: [Trade disruption, International Trade, Structural transformation, Industrialization]
 
 # Display this page in the Featured widget?
 featured: true
