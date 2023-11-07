@@ -64,7 +64,7 @@ social:
   link: uploads/mdelventhal-cv.pdf
 
 # Link to a PDF of your resume/CV.
-# To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`, 
+# To use: copy your resume to `static/uploads/resume.pdf`, enable `ai` icons in `params.toml`,
 # and uncomment the lines below.
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
@@ -74,10 +74,8 @@ social:
 highlight_name: true
 ---
 
-I am a quantitative researcher with a formal training in Economics. I have taught courses in Macroeconomics, Urban Economics, and Matlab at [Claremont McKenna College](https://www.cmc.edu/robert-day-school "The Robert Day School of Economics and Finance") and the [Universitat Autònoma de Barcelona](https://www.uabidea.eu/ "IDEA program, UAB").
-
-<!---Some have called me the [Kyrie Irving](https://nypost.com/2022/03/27/nets-kyrie-irving-gets-thunderous-ovation-in-first-game-back-at-barclays-center/ "Kyrie Irving") of macroeconomists.--->
+I am a quantitative researcher with a formal training in Economics. I have taught courses in Macroeconomics, Urban Economics, and Matlab at [Claremont McKenna College](https://www.cmc.edu/robert-day-school "The Robert Day School of Economics and Finance") and the [Universitat Autònoma de Barcelona](https://www.uabidea.eu/ "IDEA program, UAB"). I am currently a Senior Data Scientist working on Real Estate Markets and Large Language Models at [CoreLogic](https://corelogic.com "CoreLogic").
 
 Recently I have investigated the [Spatial Implications of Telecommuting]({{< relref "/publication/spatial_implications_telecommuting" >}}) and the historical progress of [Demographic Transitions Across Time and Space]({{< relref "/publication/demographic_transitions" >}}).
 
-{{< icon name="download" pack="fas" >}} You can find a copy of my CV {{< staticref "uploads/mdelventhal-cv.pdf" "newtab" >}}here{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} You can find a copy of my CV {{< staticref "uploads/MattDelventhal-cv.pdf" "newtab" >}}here{{< /staticref >}}.

@@ -78,4 +78,4 @@ image:
 # slides: example
 ---
 
-**Link to journal:** [Built Environment](https://www.alexandrinepress.co.uk/built-environment "Built Environment")
+**Link to journal:** [Built Environment](https://www.alexandrinepress.co.uk/built-environment/homes-work "Built Environment - Homes That Work")
