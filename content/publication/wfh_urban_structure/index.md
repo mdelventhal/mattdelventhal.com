@@ -1,8 +1,8 @@
 ---
-title: "Remote Work and Urban Structure"
+title: "Work From Home and Urban Structure"
 
 # Authors
-# If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here 
+# If you created a profile for a user (e.g. the default `admin` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors: [mdelventhal, "[Eunjee Kwon](https://sites.google.com/view/eunjeekwon/home/ \"Visit Eunjee's website\")", "[Andrii Parkhomenko](https://www.andrii-parkhomenko.com/ \"Visit Andrii's website\")"]
 
@@ -13,7 +13,7 @@ author_notes:
 - ''
 
 date: "2023-09-01T00:00:00Z"
-doi: "https://doi.org/10.1016/j.jue.2021.103331"
+# doi: "https://doi.org/10.1016/j.jue.2021.103331"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2023-01-01T00:00:00Z"
@@ -28,7 +28,7 @@ publication_types: ["2"]
 publication: Built Environment
 publication_short: Built Environment
 
-abstract: "The sustained increase inworking from home in thewake of Covid has the potential to reshape the U.S. urban landscape. This article describes the big picture of pre-2020 remote work in the U.S., and summarizes how that picture changed during the subsequent three years. It then introduces a mathematical model designed to calculate the possible long-run impacts of increased remotework on where and how Americans work and live. 
+abstract: "The sustained increase inworking from home in thewake of Covid has the potential to reshape the U.S. urban landscape. This article describes the big picture of pre-2020 remote work in the U.S., and summarizes how that picture changed during the subsequent three years. It then introduces a mathematical model designed to calculate the possible long-run impacts of increased remotework on where and how Americans work and live.
 This model predicts that the increased prevalence of remote and hybrid work arrangements will induce workers with remote-capable jobs to find housing farther away from their job locations, increasing the length of the average commute while cutting the time actually spent commuting. Jobs that produce goods and services which must be consumed locally will followthe bulk of the population to suburbs and smaller cities, while jobs producing tradable output will increase both in low-cost and high-productivity locations, at the expense of the middle.
 In the long run, the reallocation of demand to lower density locations with fewer legal restrictions on housing development should reduce the real price of housing by at  least 1%, but these changes depend on adjustments to the housing stock, both through new construction and through re-purposing commercial real estate in city centers.
 The model predicts a partial reversal of the decades-long concentration of talent and income in the centers of the biggest cities. Data on changes 2019-2022 suggest that some of this reversal is already happening."
@@ -56,7 +56,7 @@ url_source: ''
 url_video: ''
 
 # Featured image
-# To use, add an image named `featured.jpg/png` to your page's folder. 
+# To use, add an image named `featured.jpg/png` to your page's folder.
 image:
   caption: 'Model Diagram'
   focal_point: ""
@@ -79,4 +79,3 @@ image:
 ---
 
 **Link to journal:** [Built Environment](https://www.alexandrinepress.co.uk/built-environment "Built Environment")
-
