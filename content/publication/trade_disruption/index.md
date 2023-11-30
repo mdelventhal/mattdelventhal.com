@@ -78,6 +78,6 @@ image:
 # slides: example
 ---
 
-**Revise and Resubmit at** ***International Economic Review***
+**Conditionally Accepted** at ***International Economic Review***
 
 
