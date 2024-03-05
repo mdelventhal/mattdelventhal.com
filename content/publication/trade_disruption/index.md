@@ -34,7 +34,7 @@ publication_types: ["3"]
 abstract: "We study the impact of trade disruptions at different stages of development in a two-country, three-sector model of Spain and the UK from 1850 to 2000. In our model, the impact of trade disruptions depends on trade openness and the productivity gap between the countries. A trade collapse today (more openness, less gap) that is comparable to the Inter-War Trade Collapse of a century ago decreases the capital stock threefold (12% instead of 4%) and lifetime consumption fourfold (1.58% instead of 0.37%). We highlight the importance of capital accumulation in amplifying the cost of trade disruptions. Furthermore, we find that the Inter-War Trade Collapse promoted Spanish industrialization, while the opposite would be true today."
 
 # Summary. An optional shortened abstract.
-summary: We study the impact of trade disruptions at different stages of development in a two-country, three-sector model of Spain and the UK from 1850 to 2000.<br/><br/>**Conditionally Accepted** at ***International Economic Review***
+summary: We study the impact of trade disruptions at different stages of development in a two-country, three-sector model of Spain and the UK from 1850 to 2000.<br/><br/>**Forthcoming** in ***International Economic Review***
 
 tags: [Trade disruption, International Trade, Structural transformation, Industrialization]
 
