@@ -78,4 +78,4 @@ I am a quantitative researcher with a formal training in Economics. I have taugh
 
 Recently I have investigated the [Spatial Implications of Telecommuting]({{< relref "/publication/spatial_implications_telecommuting" >}}) and the historical progress of [Demographic Transitions Across Time and Space]({{< relref "/publication/demographic_transitions" >}}).
 
-{{< icon name="download" pack="fas" >}} You can find a copy of my CV {{< staticref "uploads/MattDelventhal-cv.pdf" "newtab" >}}here{{< /staticref >}}.
+{{< icon name="download" pack="fas" >}} You can find a copy of my CV {{< staticref "uploads/mdelventhal-cv.pdf" "newtab" >}}here{{< /staticref >}}.
