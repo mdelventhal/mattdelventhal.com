@@ -74,7 +74,11 @@ social:
 highlight_name: true
 ---
 
-I am a quantitative researcher with a formal training in Economics. I have taught courses in Macroeconomics, Urban Economics, and Matlab at [Claremont McKenna College](https://www.cmc.edu/robert-day-school "The Robert Day School of Economics and Finance") and the [Universitat Autònoma de Barcelona](https://www.uabidea.eu/ "IDEA program, UAB"), and the [University of Southern California](https://dornsife.usc.edu/econ/ "USC Dornsife Department of Economics"). I am also a Senior Data Scientist working on Real Estate Markets and Large Language Models at [CoreLogic](https://corelogic.com "CoreLogic").
+I am a quantitative researcher with a formal training in Economics. 
+
+I have taught courses in Macroeconomics, Urban Economics, and Matlab at [Claremont McKenna College](https://www.cmc.edu/robert-day-school "The Robert Day School of Economics and Finance") and the [Universitat Autònoma de Barcelona](https://www.uabidea.eu/ "IDEA program, UAB"), and the [University of Southern California](https://dornsife.usc.edu/econ/ "USC Dornsife Department of Economics").
+
+I'm also part of [CoreLogic](https://corelogic.com "CoreLogic")'s Research and Development team, where I explore the potential of new techniques like generative AI in the Real Estate analytics space.
 
 Recently I have investigated the [Spatial Implications of Telecommuting]({{< relref "/publication/spatial_implications_telecommuting" >}}) and the historical progress of [Demographic Transitions Across Time and Space]({{< relref "/publication/demographic_transitions" >}}).
 
