@@ -44,7 +44,7 @@ featured: true
 links:
 - name: Data + visualization
   url: "project/telecommute_viz/"
-url_pdf: 'publication/spatial_implications_telecommuting/Delventhal_Parkhomenko_WFH.pdf'
+url_pdf: 'publication/spatial_implications_telecommuting/Delventhal_Parkhomenko_Telecommuting.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
